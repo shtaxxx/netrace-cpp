@@ -113,6 +113,9 @@ struct nt_packet_list {
 
 class Netrace
 {
+public:
+Netrace();
+
 private:
 
 char*				nt_input_popencmd;

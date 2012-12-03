@@ -51,6 +51,9 @@ int nt_packet_sizes[] = { /*InvalidCmd*/ -1, /*ReadReq*/ 8, /*ReadResp*/ 72,
 const char* nt_node_types[] = { "L1 Data Cache", "L1 Instruction Cache",
 				"L2 Cache", "Memory Controller", "Invalid Node Type" };
 
+Netrace::Netrace()
+{
+}
 
 void Netrace::nt_open_trfile( const char* trfilename ) {
 	nt_close_trfile();
