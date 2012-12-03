@@ -53,6 +53,20 @@ const char* nt_node_types[] = { "L1 Data Cache", "L1 Instruction Cache",
 
 Netrace::Netrace()
 {
+  nt_input_popencmd = NULL;
+  nt_input_tracefile = NULL;
+  nt_input_buffer = NULL;
+  nt_input_trheader = NULL;
+  nt_dependencies_off = 0;;
+  nt_self_throttling = 0;
+	nt_primed_self_throttle = 0;
+	nt_done_reading = 0;
+  nt_latest_active_packet_cycle = 0;
+  nt_dependency_array = NULL;
+  nt_num_active_packets = 0;
+ 	nt_cleared_packets_list = 0;
+  nt_cleared_packets_list_tail = NULL;
+  nt_track_cleared_packets_list = 0;
 }
 
 void Netrace::nt_open_trfile( const char* trfilename ) {
